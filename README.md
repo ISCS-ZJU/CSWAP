@@ -6,12 +6,16 @@ Data swapping between CPUs and GPUs is widely used to address the GPU memory sho
 We propose a self-tuning tensor compression framework, named CSWAP+, for improving the virtual memory management of GPUs. It uses GPUs for (de)compression directly and thus has high portability and is minimally dependent on GPU architecture features. Furthermore, it only applies compression on tensors that are deemed to be cost-effective considering their compression ratio, size, and the characteristics of compression algorithms at runtime. Finally, to adapt to DNN models with dense tensors, it also supports cost-effective lossy compression for dense tensors with nearly no model training accuracy degradation. We conduct the experiments through six representative memory-intensive DNN models. Compared to vDNN, CSWAP+ reduces tensor swapping latency by up to 50.9% and 46.1% with NVIDIA 100 GPU, for DNN models with sparse and dense tensors, respectively.
 
 
+
+
 ## System Requirements
 
 1. CUDA Version >=
 2. PyTorch Version >= 
 
 ## Build
+
+Backend Code：https://github.com/ISCS-ZJU/pytorch/tree/master
 
 ```
 mkdir build
